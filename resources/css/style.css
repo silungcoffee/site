@@ -7,20 +7,6 @@ body, html {
     scroll-behavior: smooth;
 }
 
-/* Navbar Styling */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-
 .logo {
     display: flex;
     align-items: center;
@@ -37,37 +23,54 @@ body, html {
     font-weight: bold;
 }
 
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px; /* Adjusted padding for spacing */
+    background-color: black;
+    color: white;
+    position: sticky; /* Makes navbar stick to the top of the viewport */
+    top: 0; /* Sticks to the top of the page */
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
 .nav-links {
     display: flex;
     list-style: none;
+    margin-left: 20px; /* Added margin to move links slightly to the left */
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 15px; /* Space between links */
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-    color: #ccc;
+    color: #ccc; /* Add hover effect */
 }
 
+/* Mobile Menu Button Styling */
 .mobile-menu {
-    display: none;
+    display: none; /* Hidden on desktop */
     flex-direction: column;
     cursor: pointer;
 }
 
 .mobile-menu .menu-bar {
-    width: 25px;
-    height: 3px;
+    width: 30px; /* Slightly larger for better visibility */
+    height: 4px; /* Thicker for better visibility */
     background-color: white;
-    margin: 3px 0;
+    margin: 5px 0; /* Add spacing between bars */
+    border-radius: 2px; /* Rounded corners for a modern look */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
 /* Home Section Styling */
@@ -130,8 +133,8 @@ body, html {
   }
   
   .menu-image img {
-    width: 100%; /* Adjust width to fit container */
-    max-width: 400px; /* Limit maximum size */
+    width: 100%;
+    max-width: 400px; 
     height: auto;
   }
   
@@ -139,7 +142,7 @@ body, html {
   .drink-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Spacing between items */
+    gap: 20px;
   }
   
   .drink-item {
@@ -148,9 +151,9 @@ body, html {
   
   .drink-item img {
     width: 100%;
-    max-width: 150px; /* Adjust size of drink images */
+    max-width: 150px;
     height: auto;
-    border-radius: 10px; /* Optional rounded corners */
+    border-radius: 10px;
   }
   
   .drink-item span {
@@ -158,24 +161,41 @@ body, html {
     margin-top: 10px;
   }
 
-/* Responsive Design */
+/* Responsive Design for Mobile Screens */
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;
-        right: 20px;
+        top: calc(100% + 10px);
+        left: 0;
+        width: 100%;
         background-color: black;
-        border-radius: 5px;
-        overflow: hidden;
+        z-index: 999;
+        overflow-y: hidden;
+        max-height: 0; /* Initially collapsed */
+        transition: max-height 0.3s ease-in-out;
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Make it visible */
+        max-height: calc(100vh - 60px); /* Expand to fit content */
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+        text-align: center;
+        width: auto;
     }
 
     .mobile-menu {
         display: flex;
+        z-index: 1001;
+        position: relative;
+    }
+
+    /* Hover effect for mobile menu bars */
+    .mobile-menu:hover .menu-bar {
+        background-color: #ccc; /* Change color on hover */
     }
 }
