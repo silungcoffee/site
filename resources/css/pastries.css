@@ -1,0 +1,115 @@
+/* Pastries Section Styling */
+.pastries-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: black;
+  }
+  
+  .pastries-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .pastries-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pastry-categories {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pastries-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .pastry-list {
+    margin-bottom: 30px;
+    width: 400px;
+  }
+  
+  .pastry-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .pastry-name,
+  .pastry-price {
+    font-size: 1.4rem;
+  }
+  
+  .menu-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu-image img {
+    width: auto;
+    max-width: calc(100% - 350px);
+  }
+
+  /* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .pastries-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .pastry-categories {
+      align-items: center;
+    }
+  
+    .menu-image img {
+      max-width: calc(100% - 50px);
+      height: auto;
+      margin-top: 20px;
+    }
+  
+    .pastries-heading {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+  
+    .pastries-container h3 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+  
+    .pastry-name,
+    .pastry-price {
+      font-size: 1.2rem;
+    }
+  
+    .pastry-item {
+      margin-bottom: 6px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .pastries-heading {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+  
+    .pastry-name,
+    .pastry-price {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+  
+    .menu-image img {
+      max-width: calc(100% - 30px);
+      margin-top: 15px;
+    }
+  }
