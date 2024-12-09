@@ -1,0 +1,129 @@
+/* Non-Espresso Section Styling */
+.non-espresso-section {
+    padding: 50px 20px;
+    background-color: white;
+    color: black;
+  }
+  
+  .non-espresso-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .non-espresso-header,
+  .addons-header,
+  .refreshers-header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .non-espresso-header h2,
+  .addons-header h2,
+  .refreshers-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* List Styling for All Sections */
+  .non-espresso-list,
+  .refreshers-list,
+  .addons-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .non-espresso-labels,
+  .refreshers-labels,
+  .addons-labels {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .non-espresso-item,
+  .refreshers-item,
+  .addons-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .non-espresso-list,
+  .refreshers-list,
+  .addons-list,
+  .non-espresso-labels,
+  .refreshers-labels,
+  .addons-labels,
+  .non-espresso-item,
+  .refreshers-item,
+  .addons-item {
+    width: 300px;
+  }
+  
+  .non-espresso-drink,
+  .non-espresso-price,
+  .refreshers-drink,
+  .refreshers-price,
+  .addons-drink,
+  .addons-price {
+    font-size: 1.4rem;
+  }
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .non-espresso-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .non-espresso-header h2,
+    .addons-header h2,
+    .refreshers-header h2 {
+      font-size: 1.8rem;
+    }
+  
+    .non-espresso-drink,
+    .non-espresso-price,
+    .refreshers-drink,
+    .refreshers-price,
+    .addons-drink,
+    .addons-price {
+      font-size: 1.2rem;
+    }
+  
+    .non-espresso-item,
+    .refreshers-item,
+    .addons-item {
+      margin-bottom: 8px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .non-espresso-header h2,
+    .addons-header h2,
+    .refreshers-header h2 {
+      font-size: 1.5rem;
+    }
+  
+    .non-espresso-drink,
+    .non-espresso-price,
+    .refreshers-drink,
+    .refreshers-price,
+    .addons-drink,
+    .addons-price {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+  
+    .non-espresso-item,
+    .refreshers-item,
+    .addons-item {
+      margin-bottom: 6px;
+    }
+  }
