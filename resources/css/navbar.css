@@ -1,8 +1,9 @@
+/* General Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
+    padding: 10px 20px;
     background-color: black;
     color: white;
     position: fixed;
@@ -12,27 +13,33 @@
     z-index: 1000;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
-    margin-left: 20px;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin-left: 40px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
-    transition: color 0.3s ease-in-out;
 }
 
-.nav-links a:hover {
-    color: #ccc;
-}
-
+/* Mobile Menu Styling */
 .mobile-menu {
     display: none;
     flex-direction: column;
@@ -40,50 +47,42 @@
 }
 
 .mobile-menu .menu-bar {
-    width: 30px;
-    height: 4px;
+    width: 25px;
+    height: 3px;
     background-color: white;
-    margin: 5px 0;
-    border-radius: 2px;
-    transition: all 0.3s ease-in-out;
+    margin: 4px 0;
 }
 
-
-/* Responsive Design for Mobile Screens */
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: calc(100% + 10px);
+        top: 100%;
         left: 0;
         width: 100%;
         background-color: black;
-        z-index: 999;
-        overflow-y: hidden;
-        max-height: 0;
+        padding: 10px 0;
+        z-index: 9999;
+        box-sizing: border-box;
         transition: max-height 0.3s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
     }
 
     .nav-links.active {
         display: flex;
-        max-height: calc(100vh - 60px);
+        max-height: 300px;
     }
 
     .nav-links li {
-        margin-bottom: 10px;
+        margin: 0;
+        padding: 10px 0;
         text-align: center;
-        width: auto;
     }
 
     .mobile-menu {
         display: flex;
         z-index: 1001;
-        position: relative;
-    }
-
-    /* Hover effect for mobile menu bars */
-    .mobile-menu:hover .menu-bar {
-        background-color: #ccc;
     }
 }

@@ -1,21 +1,21 @@
 /* Footer Section Styling */
 .footer-section {
-    background-color: #000000; /* Dark background for contrast */
+    background-color: #000000;
     color: white;
     padding: 50px 20px;
   }
   
   .footer-container {
     display: flex;
-    justify-content: space-between; /* Space between sections */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   
   .footer-about,
   .footer-contact,
   .footer-social {
     flex: 1;
-    margin: 0 20px; /* Add spacing between sections */
+    margin: 0 20px;
   }
   
   .footer-about h2,
@@ -62,31 +62,31 @@
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
     .footer-container {
-      flex-direction: column; /* Stack sections vertically */
-      align-items: center; /* Center-align all sections */
-      text-align: center; /* Center-align text within each section */
-      gap: 20px; /* Add spacing between stacked sections */
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
       width: 100%;
     }
   
     .footer-about,
     .footer-contact,
     .footer-social {
-      margin-bottom: 20px; /* Add spacing between sections */
+      margin-bottom: 20px;
     }
   
     .footer-about h2,
     .footer-contact h3,
     .footer-social h3 {
-      font-size: 1.6rem; /* Reduce heading size for smaller screens */
+      font-size: 1.6rem;
       margin-bottom: 10px;
     }
   
     .footer-about p,
     .footer-contact p,
     .footer-social ul {
-      font-size: 1.2rem; /* Adjust font size for readability */
-      line-height: 1.5; /* Ensure proper spacing between lines */
+      font-size: 1.2rem;
+      line-height: 1.5;
     }
   
     .footer-social ul {
@@ -95,7 +95,7 @@
     }
   
     .footer-social li {
-      margin-bottom: 10px; /* Add spacing between social links */
+      margin-bottom: 10px;
     }
   }
   
@@ -103,24 +103,24 @@
     .footer-about h2,
     .footer-contact h3,
     .footer-social h3 {
-      font-size: 1.4rem; /* Further reduce heading size for very small screens */
+      font-size: 1.4rem;
       margin-bottom: 8px;
     }
   
     .footer-about p,
     .footer-contact p,
     .footer-social ul {
-      font-size: 1rem; /* Further adjust font size for readability */
+      font-size: 1rem;
       line-height: 1.4;
     }
   
     .footer-container {
-      gap: 15px; /* Reduce spacing between stacked sections */
-      padding: 10px; /* Adjust padding for smaller screens */
+      gap: 15px;
+      padding: 10px;
     }
   
     .footer-bottom p {
-      font-size: 0.9rem; /* Adjust footer bottom text size */
+      font-size: 0.9rem;
       margin-top: 15px;
     }
   }

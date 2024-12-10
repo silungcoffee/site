@@ -1,9 +1,15 @@
-// Mobile Menu Toggle
-const mobileMenu = document.querySelector('.mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
+const navItems = document.querySelectorAll('.nav-links a');
 
 mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active'); // Toggles 'active' class
+    navLinks.classList.toggle('active');
+});
+
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
 });
 
 // Smooth Scrolling

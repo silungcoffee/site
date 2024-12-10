@@ -77,8 +77,8 @@
 
   .classics-list {
       margin: 0 auto;
-      width: 90%; /* Ensures proper alignment within the viewport */
-      word-wrap: break-word; /* Prevents text from clipping */
+      width: 90%;
+      word-wrap: break-word;
   }
 
   .classics-header h2 {

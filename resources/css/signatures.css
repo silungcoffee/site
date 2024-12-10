@@ -52,9 +52,9 @@
 
   .signature-drink,
   .signature-price {
-  font-size: 1.4rem; /* Increased font size for better readability */
-}
-
+  font-size: 1.4rem;
+  }
+  
   /* Right Side Image Styling */
   .menu-image {
     flex: 1;
@@ -71,7 +71,7 @@
   /* Drink Gallery Styling */
   .drink-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
   }
 
