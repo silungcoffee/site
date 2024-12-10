@@ -19,7 +19,7 @@
 }
 
 .logo img {
-    width: 40px;
+    width: 170px;
     height: auto;
     margin-right: 10px;
 }
@@ -36,7 +36,7 @@
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 /* Mobile Menu Styling */
@@ -84,5 +84,11 @@
     .mobile-menu {
         display: flex;
         z-index: 1001;
+    }
+
+    .logo img {
+        width: 120px;
+        height: auto;
+        margin-right: 10px;
     }
 }

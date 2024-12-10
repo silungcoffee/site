@@ -1,87 +1,102 @@
 /* General Reset */
 body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Kranto Normal', sans-serif;
-    scroll-behavior: smooth;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-}
-
-.logo span {
-    font-size: 1.5rem;
-    font-weight: bold;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kranto Normal', sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* Home Section Styling */
 .home-section {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
+position: relative;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+margin: 0;
+padding: 0;
 }
 
 .home-content {
-  position: absolute;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+position: absolute;
+z-index: 2;
+width: 80%; /* Expanded container width */
+max-width: 700px; /* Prevent it from getting too wide */
+text-align: center;
+color: white;
 }
 
-.home-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.logo-container {
+position: relative; /* Allows precise positioning inside the video */
 }
 
-.home-content p {
-  font-size: 1.2rem;
-  margin: 0;
+.logo-img {
+position: absolute; /* Place logo inside the video */
+top: -100px; /* Adjust this value to move logo higher or lower */
+left: 50%;
+transform: translateX(-50%);
+width: 300px; /* Adjust logo size */
 }
 
+.text-content {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+  padding: 30px; /* Add padding to make it look spacious */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  margin-top: 250px; /* Moves the text-content lower */
+}
+
+.text-content h1 {
+  font-size: 2.5rem; /* Adjust heading size */
+  margin-bottom: 15px; /* Space below heading */
+}
+
+.text-content .tagline {
+    font-size: 1.5rem; /* Slightly larger tagline text */
+    margin-bottom: 10px; /* Space below tagline */
+}
+
+.text-content .store-hours {
+    font-size: 1.2rem; /* Larger store hours text for better visibility */
+    font-style: italic; /* Optional styling for emphasis */
+}
+
+/* Video Background Styling */
 .home-gif {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: none; /* Removes any border around the iframe */
-  object-fit: cover;
-  object-position: center;
+  object-fit: cover; /* Ensures video covers entire section */
+  object-position: center; /* Centers the video content */
 }
 
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-  .home-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .home-content p {
-    font-size: 1rem;
-  }
-
   .home-content {
-    padding: 15px;
+      width: 90%; /* Slightly smaller container on mobile devices */
   }
 
-  .home-gif {
-    object-fit: cover;
-    height: 100%;
+  .logo-img {
+      width: 300px; /* Reduce logo size for smaller screens */
+      top: -10px; /* Adjust logo position for smaller screens */
+  }
+
+  .text-content{
+    margin-top: 400px;
+  }
+
+  .text-content h1 {
+      font-size: 2rem; /* Reduce heading size on mobile devices */
+  }
+
+  .text-content .tagline {
+      font-size: 1.2rem; /* Adjust tagline size for smaller screens */
+  }
+
+  .text-content .store-hours {
+      font-size: 1rem; /* Adjust store hours size for smaller screens */
   }
 }
-
