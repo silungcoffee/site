@@ -94,6 +94,11 @@
     .pastry-item {
       margin-bottom: 6px;
     }
+
+    .pastry-list {
+      margin-bottom: 30px;
+      width: 280px;
+    }
   }
   
   @media screen and (max-width: 480px) {

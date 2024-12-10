@@ -66,6 +66,7 @@
       align-items: center; /* Center-align all sections */
       text-align: center; /* Center-align text within each section */
       gap: 20px; /* Add spacing between stacked sections */
+      width: 100%;
     }
   
     .footer-about,
