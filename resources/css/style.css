@@ -32,12 +32,46 @@ color: white;
 position: relative; /* Allows precise positioning inside the video */
 }
 
+/* Logo Link Styling */
+.logo-link {
+  display: inline-block;
+  position: relative;
+}
+
+/* Hover Effect for Logo */
 .logo-img {
-position: absolute; /* Place logo inside the video */
-top: -100px; /* Adjust this value to move logo higher or lower */
-left: 50%;
-transform: translateX(-50%);
-width: 300px; /* Adjust logo size */
+  position: absolute; /* Keeps it in place */
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px; /* Adjust logo size */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.logo-link:hover .logo-img {
+  transform: translateX(-50%) scale(1.1); /* Enlarge on hover */
+}
+
+/* Curved Text Styling */
+.curved-text {
+  position: absolute;
+  top: -100px; /* Adjust this value to move it vertically (negative moves it up, positive moves it down) */
+  left: 50%; /* Adjust this value to move it horizontally (50% centers it, lower values move it left, higher values move it right) */
+  transform: translateX(-50%); /* Keeps it centered horizontally relative to the logo */
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional shadow for better visibility */
+  font-weight: bold;
+}
+
+
+/* Create a curved effect with CSS */
+.curved-text::after {
+  content: "Click Me";
+  display: block;
+  text-align: center;
+  transform: rotate(-10deg); /* Slight curve effect */
+
 }
 
 .text-content {
@@ -80,8 +114,14 @@ width: 300px; /* Adjust logo size */
   }
 
   .logo-img {
-      width: 300px; /* Reduce logo size for smaller screens */
-      top: -10px; /* Adjust logo position for smaller screens */
+      width: 250px; /* Reduce logo size for smaller screens */
+      top: 40px; /* Adjust logo position for smaller screens */
+  }
+
+  .curved-text {
+    top: 60px; /* Adjust vertical position for mobile */
+    left: 50%; /* Keep it centered horizontally */
+    font-size: 0.7rem; /* Reduce font size for smaller screens */
   }
 
   .text-content{
