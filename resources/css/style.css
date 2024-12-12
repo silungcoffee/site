@@ -1,9 +1,11 @@
+@import url('https://fonts.cdnfonts.com/css/tt-fors-trial');
+
 /* General Reset */
 body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Kranto Normal', sans-serif;
+  font-family: 'TT Fors Trial', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -41,10 +43,10 @@ position: relative; /* Allows precise positioning inside the video */
 /* Hover Effect for Logo */
 .logo-img {
   position: absolute; /* Keeps it in place */
-  top: -100px;
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px; /* Adjust logo size */
+  width: 270px; /* Adjust logo size */
   transition: transform 0.3s ease-in-out; /* Smooth hover effect */
 }
 
@@ -55,10 +57,10 @@ position: relative; /* Allows precise positioning inside the video */
 /* Curved Text Styling */
 .curved-text {
   position: absolute;
-  top: -100px; /* Adjust this value to move it vertically (negative moves it up, positive moves it down) */
+  top: 100px; /* Adjust this value to move it vertically (negative moves it up, positive moves it down) */
   left: 50%; /* Adjust this value to move it horizontally (50% centers it, lower values move it left, higher values move it right) */
   transform: translateX(-50%); /* Keeps it centered horizontally relative to the logo */
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional shadow for better visibility */
   font-weight: bold;
@@ -78,7 +80,7 @@ position: relative; /* Allows precise positioning inside the video */
   background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
   padding: 30px; /* Add padding to make it look spacious */
   border-radius: 10px; /* Rounded corners for a modern look */
-  margin-top: 250px; /* Moves the text-content lower */
+  margin-top: 400px; /* Moves the text-content lower */
 }
 
 .text-content h1 {
@@ -119,7 +121,7 @@ position: relative; /* Allows precise positioning inside the video */
   }
 
   .curved-text {
-    top: 60px; /* Adjust vertical position for mobile */
+    top: 50px; /* Adjust vertical position for mobile */
     left: 50%; /* Keep it centered horizontally */
     font-size: 0.7rem; /* Reduce font size for smaller screens */
   }
